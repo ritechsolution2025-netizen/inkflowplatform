@@ -382,7 +382,8 @@ function Plans() {
         "Staff Attendance",
         "Investment (Pigmi)",
         "Scan Adhar"
-        
+        "AI impliment"
+        "Studio Website FREE"
       ],
     },
   ];
