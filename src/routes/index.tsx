@@ -537,7 +537,7 @@ function Plans() {
         </div>
 
         {/* Customer Information */}
-        <div className="mt-12 rounded-2xl border bg-background p-6 md:p-8">
+        {/* <div className="mt-12 rounded-2xl border bg-background p-6 md:p-8">
           <div className="grid gap-6 md:grid-cols-3">
 
             <div>
@@ -574,16 +574,16 @@ function Plans() {
             </div>
 
           </div>
-        </div>
+        </div> */}
 
-        {/* Pricing Note */}
+        /* {/* Pricing Note */}
         <p className="mt-8 text-center text-xs leading-relaxed text-muted-foreground">
           All prices are in INR. Each plan includes one studio workspace.
           Artist limits apply according to the selected subscription.
           Payment processing is not included in the studio transaction
           recording features. Confirm applicable taxes and subscription
           terms before purchase.
-        </p>
+        </p> */
 
       </div>
     </section>
