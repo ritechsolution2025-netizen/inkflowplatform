@@ -121,7 +121,7 @@ function Hero() {
         <figure className="relative mt-14">
           <div className="overflow-x-auto pb-2"><div className="min-w-[720px] md:pr-40"><DesktopMockup /></div></div>
           <MobileMockup className="absolute -bottom-8 right-0 hidden md:block" />
-          <figcaption className="mt-4 text-xs text-muted-foreground">Product preview — illustrative, with fictional sample records.</figcaption>
+          <figcaption className="mt-4 text-xs text-muted-foreground">Preview — Manage Your Tattoo Studio Faster With INK FLOW.</figcaption>
         </figure>
       </div>
     </section>
@@ -181,11 +181,11 @@ const features = [
   { icon: Users, t: "Client records", d: "Keep contact details and visit-related information available to the studio." },
   { icon: UserCog, t: "Team management", d: "Maintain artist and staff profiles, roles, specialties, availability, and booking settings." },
   { icon: Scissors, t: "Services and offerings", d: "Manage studio services, categories, prices, tax settings, and active status." },
-  { icon: ClipboardSignature, t: "Client intake and waivers", d: "Collect intake details, health disclosures, consent, signature, and staff verification in a structured record." },
-  { icon: Receipt, t: "Invoices and checkout records", d: "Organize queue and transaction workflows, including recorded payment method and amounts. Records only — the app does not process payments." },
-  { icon: BarChart3, t: "Expenses and reports", d: "Record studio expenses and review reports based on available transaction and expense data." },
-  { icon: Store, t: "Studio profile and preferences", d: "Save studio details, logo, currency preferences, tax settings, and accepted payment methods." },
-  { icon: DownloadCloud, t: "Studio-only backup", d: "Download a JSON backup containing records for the selected studio." },
+  { icon: ClipboardSignature, t: "Client intake an Consent", d: "Collect intake details, health disclosures, consent forms, signature, and staff verification in a structured record." },
+  { icon: Receipt, t: "Invoices and Checkout records", d: "Organize queue and transaction workflows, including recorded payment method and amounts. Records only — the app does not process payments." },
+  { icon: BarChart3, t: "Expenses and Reports", d: "Record studio expenses and review reports based on available transaction and expense data." },
+  { icon: Store, t: "Studio profile and Preferences", d: "Save studio details, logo, currency preferences, tax settings, and accepted payment methods." },
+  { icon: DownloadCloud, t: "Backup", d: "Download a JSON backup containing records for the selected studio." },
 ];
 
 function Features() {
@@ -246,7 +246,7 @@ function Preview() {
               </li>
             ))}
           </ul>
-          <p className="mt-6 text-xs opacity-70">Illustrative preview using fictional sample data.</p>
+          <p className="mt-6 text-xs opacity-70">Manage Your Tatto Studio with INK FLOW and Grow Faster</p>
         </div>
         <div className="flex items-end gap-6">
           <div className="min-w-0 flex-1 overflow-x-auto"><div className="min-w-[640px]"><DesktopMockup /></div></div>
@@ -280,8 +280,8 @@ function Plans() {
     <section id="plans" className="border-t bg-card py-24">
       <div className="mx-auto max-w-6xl px-5">
         <Eyebrow>Plans</Eyebrow>
-        <h2 className="mt-3 text-3xl font-extrabold md:text-4xl">Choose the plan that fits your studio.</h2>
-        <p className="mt-4 max-w-xl text-muted-foreground">Current plan details, pricing, and billing options are shown when you choose a plan.</p>
+        <h2 className="mt-3 text-3xl font-extrabold md:text-4xl">Choose the Plan that fits your Studio.</h2>
+        <p className="mt-4 max-w-xl text-muted-foreground">Current plan details, pricing, an billing options are shown when you choose a plan.</p>
         <div className="mt-12 grid gap-5 md:grid-cols-3">
           {plans.map((p) => (
             <article key={p} className="flex flex-col rounded-2xl border bg-background p-7 transition-shadow hover:shadow-soft">
