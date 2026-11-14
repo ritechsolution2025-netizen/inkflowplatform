@@ -296,6 +296,7 @@ function DataSection() {
 //   );
 // }
 //new updated plans following code start 
+
 function Plans(){
   const plans = [
   {
@@ -360,123 +361,125 @@ function Plans(){
     ],
   },
 ];
-function Plans() {
-  return (
-    <section id="plans" className="border-t bg-card py-24">
-      <div className="mx-auto max-w-6xl px-5">
-        <div className="text-center">
-          <Eyebrow>Simple and transparent pricing</Eyebrow>
-
-          <h2 className="mt-3 text-3xl font-extrabold md:text-4xl">
-            The right plan for every tattoo studio.
-          </h2>
-
-          <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
-            From independent artists to growing studios, choose a plan
-            that fits your team. Every plan includes the essential
-            tools to manage your studio.
-          </p>
-        </div>
-
-        <div className="mt-12 grid items-stretch gap-6 md:grid-cols-3">
-          {plans.map((p) => (
-            <article
-              key={p.id}
-              className={`relative flex flex-col rounded-2xl border p-7 transition-all hover:-translate-y-1 hover:shadow-soft ${
-                p.popular
-                  ? "border-primary bg-background shadow-soft"
-                  : "bg-background"
-              }`}
-            >
-              {p.popular && (
-                <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-primary px-4 py-1 text-xs font-bold text-primary-foreground">
-                  MOST POPULAR
-                </span>
-              )}
-
-              <div>
-                <p className="text-sm font-semibold text-primary">
-                  {p.audience}
-                </p>
-
-                <h3 className="mt-2 text-2xl font-extrabold">
-                  {p.name}
-                </h3>
-
-                <p className="mt-2 min-h-12 text-sm text-muted-foreground">
-                  {p.description}
-                </p>
-              </div>
-
-              <div className="mt-7 border-b pb-6">
-                <div className="flex items-baseline gap-2">
-                  <span className="text-4xl font-extrabold tracking-tight">
-                    {p.price}
-                  </span>
-                  <span className="text-sm text-muted-foreground">
-                    / month
-                  </span>
-                </div>
-
-                <p className="mt-3 text-sm font-semibold">
-                  {p.annual} / year
-                </p>
-
-                <p className="mt-1 text-xs text-primary">
-                  Save approximately 2 months with annual billing
-                </p>
-
-                <div className="mt-5 rounded-lg bg-secondary px-4 py-3 text-sm font-semibold">
-                  {p.artists} · 1 studio
-                </div>
-              </div>
-
-              <div className="flex-1 pt-6">
-                <p className="mb-4 text-sm font-bold">
-                  What's included:
-                </p>
-
-                <ul className="space-y-3">
-                  {p.features.map((feature) => (
-                    <li
-                      key={feature}
-                      className="flex items-start gap-3 text-sm"
-                    >
-                      <Check
-                        className="mt-0.5 size-4 shrink-0 text-primary"
-                        aria-hidden
-                      />
-                      <span>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <a
-                href={site.plansUrl}
-                className={`mt-8 flex items-center justify-center gap-2 rounded-xl px-5 py-3 text-sm font-bold transition-colors ${
-                  p.popular
-                    ? "btn-primary"
-                    : "btn-ghost"
-                }`}
-              >
-                View Plan & Billing
-                <ArrowRight className="size-4" />
-              </a>
-            </article>
-          ))}
-        </div>
-
-        <p className="mt-8 text-center text-xs text-muted-foreground">
-          Prices are in INR. Confirm applicable taxes and billing terms
-          before publishing. Plan limits apply according to your active
-          subscription.
-        </p>
-      </div>
-    </section>
-  );
 }
-}  
+}
+// function Plans() {
+//   return (
+//     <section id="plans" className="border-t bg-card py-24">
+//       <div className="mx-auto max-w-6xl px-5">
+//         <div className="text-center">
+//           <Eyebrow>Simple and transparent pricing</Eyebrow>
+
+//           <h2 className="mt-3 text-3xl font-extrabold md:text-4xl">
+//             The right plan for every tattoo studio.
+//           </h2>
+
+//           <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
+//             From independent artists to growing studios, choose a plan
+//             that fits your team. Every plan includes the essential
+//             tools to manage your studio.
+//           </p>
+//         </div>
+
+//         <div className="mt-12 grid items-stretch gap-6 md:grid-cols-3">
+//           {plans.map((p) => (
+//             <article
+//               key={p.id}
+//               className={`relative flex flex-col rounded-2xl border p-7 transition-all hover:-translate-y-1 hover:shadow-soft ${
+//                 p.popular
+//                   ? "border-primary bg-background shadow-soft"
+//                   : "bg-background"
+//               }`}
+//             >
+//               {p.popular && (
+//                 <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-primary px-4 py-1 text-xs font-bold text-primary-foreground">
+//                   MOST POPULAR
+//                 </span>
+//               )}
+
+//               <div>
+//                 <p className="text-sm font-semibold text-primary">
+//                   {p.audience}
+//                 </p>
+
+//                 <h3 className="mt-2 text-2xl font-extrabold">
+//                   {p.name}
+//                 </h3>
+
+//                 <p className="mt-2 min-h-12 text-sm text-muted-foreground">
+//                   {p.description}
+//                 </p>
+//               </div>
+
+//               <div className="mt-7 border-b pb-6">
+//                 <div className="flex items-baseline gap-2">
+//                   <span className="text-4xl font-extrabold tracking-tight">
+//                     {p.price}
+//                   </span>
+//                   <span className="text-sm text-muted-foreground">
+//                     / month
+//                   </span>
+//                 </div>
+
+//                 <p className="mt-3 text-sm font-semibold">
+//                   {p.annual} / year
+//                 </p>
+
+//                 <p className="mt-1 text-xs text-primary">
+//                   Save approximately 2 months with annual billing
+//                 </p>
+
+//                 <div className="mt-5 rounded-lg bg-secondary px-4 py-3 text-sm font-semibold">
+//                   {p.artists} · 1 studio
+//                 </div>
+//               </div>
+
+//               <div className="flex-1 pt-6">
+//                 <p className="mb-4 text-sm font-bold">
+//                   What's included:
+//                 </p>
+
+//                 <ul className="space-y-3">
+//                   {p.features.map((feature) => (
+//                     <li
+//                       key={feature}
+//                       className="flex items-start gap-3 text-sm"
+//                     >
+//                       <Check
+//                         className="mt-0.5 size-4 shrink-0 text-primary"
+//                         aria-hidden
+//                       />
+//                       <span>{feature}</span>
+//                     </li>
+//                   ))}
+//                 </ul>
+//               </div>
+
+//               <a
+//                 href={site.plansUrl}
+//                 className={`mt-8 flex items-center justify-center gap-2 rounded-xl px-5 py-3 text-sm font-bold transition-colors ${
+//                   p.popular
+//                     ? "btn-primary"
+//                     : "btn-ghost"
+//                 }`}
+//               >
+//                 View Plan & Billing
+//                 <ArrowRight className="size-4" />
+//               </a>
+//             </article>
+//           ))}
+//         </div>
+
+//         <p className="mt-8 text-center text-xs text-muted-foreground">
+//           Prices are in INR. Confirm applicable taxes and billing terms
+//           before publishing. Plan limits apply according to your active
+//           subscription.
+//         </p>
+//       </div>
+//     </section>
+//   );
+// }
+// }  
 function Faq() {
   const faqs: { q: string; a: React.ReactNode }[] = [
     { q: "What can I manage with InkFlow Studio?", a: "Appointments, client records, team members, services, intake forms and waivers, invoices and checkout records, expenses, reports, and your studio profile and preferences." },
