@@ -274,28 +274,322 @@ function DataSection() {
   );
 }
 
-function Plans() {
-   const plans = ["Silver", "Gold", "Diamond"];
-   return (
-     <section id="plans" className="border-t bg-card py-24">
-       <div className="mx-auto max-w-6xl px-5">
-         <Eyebrow>Plans</Eyebrow>
-         <h2 className="mt-3 text-3xl font-extrabold md:text-4xl">Choose the Plan that fits your Studio.</h2>
-         <p className="mt-4 max-w-xl text-muted-foreground">Current plan details, pricing, an billing options are shown when you choose a plan.</p>
-         <div className="mt-12 grid gap-5 md:grid-cols-3">
-           {plans.map((p) => (
-             <article key={p} className="flex flex-col rounded-2xl border bg-background p-7 transition-shadow hover:shadow-soft">
-               <h3 className="text-2xl font-extrabold">{p}</h3>
-               <p className="mt-2 flex-1 text-sm text-muted-foreground">See what's included and current pricing for the {p} plan.</p>
-               <a href={site.plansUrl} className="btn-ghost mt-8">View plans</a>
-             </article>
-           ))}
-         </div>
-       </div>
-     </section>
-  );
- }
+// function Plans() {
+//    const plans = ["Silver", "Gold", "Diamond"];
+//    return (
+//      <section id="plans" className="border-t bg-card py-24">
+//        <div className="mx-auto max-w-6xl px-5">
+//          <Eyebrow>Plans</Eyebrow>
+//          <h2 className="mt-3 text-3xl font-extrabold md:text-4xl">Choose the Plan that fits your Studio.</h2>
+//          <p className="mt-4 max-w-xl text-muted-foreground">Current plan details, pricing, an billing options are shown when you choose a plan.</p>
+//          <div className="mt-12 grid gap-5 md:grid-cols-3">
+//            {plans.map((p) => (
+//              <article key={p} className="flex flex-col rounded-2xl border bg-background p-7 transition-shadow hover:shadow-soft">
+//                <h3 className="text-2xl font-extrabold">{p}</h3>
+//                <p className="mt-2 flex-1 text-sm text-muted-foreground">See what's included and current pricing for the {p} plan.</p>
+//                <a href="https://inkflwobeta2.vercel.app/" className="btn-ghost mt-8">View plans</a>
+//              </article>
+//            ))}
+//          </div>
+//        </div>
+//      </section>
+//   );
+//  }
 //new updated plans following code start 
+
+
+function Plans() {
+  const plans = [
+    {
+      id: "silver",
+      name: "Silver",
+      price: "₹599",
+      annual: "₹5,999",
+      artists: "1 Artist",
+      audience: "Perfect for independent artists",
+      description:
+        "Start managing your tattoo business professionally with all the essential studio management tools.",
+      popular: false,
+      features: [
+        "1 Artist Account",
+        "1 Studio Workspace",
+        "Appointment Management",
+        "Client Management & Records",
+        "Artist Profile Management",
+        "Services & Price Management",
+        "Digital Intake & Consent Forms",
+        "Client Signature Records",
+        "Invoices & Checkout Records",
+        "Expense Management",
+        "Basic Reports",
+        "Studio Profile & Settings",
+        "JSON Data Backup",
+      ],
+    },
+    {
+      id: "gold",
+      name: "Gold",
+      price: "₹999",
+      annual: "₹9,999",
+      artists: "Up to 5 Artists",
+      audience: "Best for growing tattoo studios",
+      description:
+        "Manage your artists, customers, appointments and studio operations together in one organized workspace.",
+      popular: true,
+      features: [
+        "Up to 5 Artist Accounts",
+        "1 Studio Workspace",
+        "Appointment Management",
+        "Client Management & Records",
+        "Artist & Team Management",
+        "Services & Price Management",
+        "Digital Intake & Consent Forms",
+        "Client Signature Records",
+        "Invoices & Checkout Records",
+        "Expense Management",
+        "Studio Reports & Analytics",
+        "Studio Profile & Settings",
+        "JSON Data Backup",
+      ],
+    },
+    {
+      id: "diamond",
+      name: "Diamond",
+      price: "₹1,499",
+      annual: "₹14,999",
+      artists: "Up to 10 Artists",
+      audience: "For established tattoo studios",
+      description:
+        "Bring your larger tattoo team and daily business operations into one centralized studio management platform.",
+      popular: false,
+      features: [
+        "Up to 10 Artist Accounts",
+        "1 Studio Workspace",
+        "Appointment Management",
+        "Client Management & Records",
+        "Advanced Team Management",
+        "Services & Price Management",
+        "Digital Intake & Consent Forms",
+        "Client Signature Records",
+        "Invoices & Checkout Records",
+        "Expense Management",
+        "Studio Reports & Analytics",
+        "Studio Profile & Settings",
+        "JSON Data Backup",
+      ],
+    },
+  ];
+
+  return (
+    <section id="plans" className="border-t bg-card py-24">
+      <div className="mx-auto max-w-6xl px-5">
+
+        {/* Pricing Heading */}
+        <div className="text-center">
+          <Eyebrow>INK FLOW PRICING</Eyebrow>
+
+          <h2 className="mt-3 text-3xl font-extrabold md:text-4xl">
+            Choose the Perfect Plan for Your Studio.
+          </h2>
+
+          <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
+            Whether you are an independent tattoo artist or managing
+            a growing tattoo studio, InkFlow has a plan to match your
+            business needs. Manage your studio smarter, save time and
+            focus more on your artwork.
+          </p>
+
+          <div className="mt-6 flex flex-wrap justify-center gap-3 text-sm">
+            <span className="rounded-full border bg-background px-4 py-2 font-medium">
+              Flexible Monthly Plans
+            </span>
+            <span className="rounded-full border bg-background px-4 py-2 font-medium">
+              Save with Annual Billing
+            </span>
+            <span className="rounded-full border bg-background px-4 py-2 font-medium">
+              Built for Tattoo Studios
+            </span>
+          </div>
+        </div>
+
+        {/* Pricing Cards */}
+        <div className="mt-14 grid items-stretch gap-6 md:grid-cols-3">
+
+          {plans.map((p) => (
+            <article
+              key={p.id}
+              className={`relative flex flex-col rounded-2xl border p-7 transition-all hover:-translate-y-1 hover:shadow-soft ${
+                p.popular
+                  ? "border-primary bg-background shadow-soft"
+                  : "bg-background"
+              }`}
+            >
+
+              {/* Popular Badge */}
+              {p.popular && (
+                <span className="absolute -top-3 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-primary px-5 py-1.5 text-xs font-bold text-primary-foreground">
+                  MOST POPULAR
+                </span>
+              )}
+
+              {/* Plan Details */}
+              <div>
+                <p className="text-xs font-bold uppercase tracking-wider text-primary">
+                  {p.audience}
+                </p>
+
+                <h3 className="mt-3 text-2xl font-extrabold">
+                  {p.name}
+                </h3>
+
+                <p className="mt-3 min-h-16 text-sm leading-relaxed text-muted-foreground">
+                  {p.description}
+                </p>
+              </div>
+
+              {/* Pricing Details */}
+              <div className="mt-7 border-b pb-6">
+                <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                  Monthly Subscription
+                </p>
+
+                <div className="mt-2 flex items-baseline gap-2">
+                  <span className="text-4xl font-extrabold tracking-tight">
+                    {p.price}
+                  </span>
+
+                  <span className="text-sm text-muted-foreground">
+                    / month
+                  </span>
+                </div>
+
+                <div className="mt-5 rounded-xl bg-secondary p-4">
+                  <p className="text-xs font-semibold text-muted-foreground">
+                    ANNUAL SUBSCRIPTION
+                  </p>
+
+                  <p className="mt-1 text-xl font-extrabold">
+                    {p.annual}
+                    <span className="ml-1 text-xs font-normal text-muted-foreground">
+                      / year
+                    </span>
+                  </p>
+
+                  <p className="mt-1 text-xs font-semibold text-primary">
+                    Save approximately 2 months with annual billing
+                  </p>
+                </div>
+
+                <div className="mt-5 flex items-center gap-2 rounded-lg border px-4 py-3">
+                  <Users className="size-5 text-primary" />
+
+                  <div>
+                    <p className="text-sm font-bold">{p.artists}</p>
+                    <p className="text-xs text-muted-foreground">
+                      Included artist capacity
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Included Features */}
+              <div className="flex-1 pt-6">
+                <h4 className="mb-5 text-sm font-bold">
+                  Everything included:
+                </h4>
+
+                <ul className="space-y-3">
+                  {p.features.map((feature) => (
+                    <li
+                      key={feature}
+                      className="flex items-start gap-3 text-sm"
+                    >
+                      <Check
+                        className="mt-0.5 size-4 shrink-0 text-primary"
+                        aria-hidden
+                      />
+
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Choose Plan Button */}
+              <a
+                href="https://inkflwobeta2.vercel.app/"
+                className={`mt-8 flex items-center justify-center gap-2 rounded-xl px-5 py-3 text-sm font-bold transition-all ${
+                  p.popular
+                    ? "btn-primary"
+                    : "btn-ghost"
+                }`}
+              >
+                Get Started with {p.name}
+                <ArrowRight className="size-4" />
+              </a>
+
+              <p className="mt-3 text-center text-xs text-muted-foreground">
+                Secure your studio workspace with InkFlow.
+              </p>
+            </article>
+          ))}
+
+        </div>
+
+        {/* Customer Information */}
+        <div className="mt-12 rounded-2xl border bg-background p-6 md:p-8">
+          <div className="grid gap-6 md:grid-cols-3">
+
+            <div>
+              <h3 className="font-bold">
+                <ShieldCheck className="mr-2 inline size-5 text-primary" />
+                Your Studio Data
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                Organize your studio records using your studio workspace
+                and access the available JSON backup feature.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="font-bold">
+                <Users className="mr-2 inline size-5 text-primary" />
+                Grow Your Team
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                Choose an artist capacity that matches your studio.
+                Upgrade your subscription as your team grows.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="font-bold">
+                <Receipt className="mr-2 inline size-5 text-primary" />
+                Transparent Billing
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                Choose monthly or annual pricing. Applicable taxes
+                and final billing terms will be confirmed during checkout.
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+        {/* Pricing Note */}
+        <p className="mt-8 text-center text-xs leading-relaxed text-muted-foreground">
+          All prices are in INR. Each plan includes one studio workspace.
+          Artist limits apply according to the selected subscription.
+          Payment processing is not included in the studio transaction
+          recording features. Confirm applicable taxes and subscription
+          terms before purchase.
+        </p>
+
+      </div>
+    </section>
+  );
+}
+
  
 function Faq() {
   const faqs: { q: string; a: React.ReactNode }[] = [
