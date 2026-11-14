@@ -274,23 +274,206 @@ function DataSection() {
   );
 }
 
+// function Plans() {
+//   const plans = ["Silver", "Gold", "Diamond"];
+//   return (
+//     <section id="plans" className="border-t bg-card py-24">
+//       <div className="mx-auto max-w-6xl px-5">
+//         <Eyebrow>Plans</Eyebrow>
+//         <h2 className="mt-3 text-3xl font-extrabold md:text-4xl">Choose the Plan that fits your Studio.</h2>
+//         <p className="mt-4 max-w-xl text-muted-foreground">Current plan details, pricing, an billing options are shown when you choose a plan.</p>
+//         <div className="mt-12 grid gap-5 md:grid-cols-3">
+//           {plans.map((p) => (
+//             <article key={p} className="flex flex-col rounded-2xl border bg-background p-7 transition-shadow hover:shadow-soft">
+//               <h3 className="text-2xl font-extrabold">{p}</h3>
+//               <p className="mt-2 flex-1 text-sm text-muted-foreground">See what's included and current pricing for the {p} plan.</p>
+//               <a href={site.plansUrl} className="btn-ghost mt-8">View plans</a>
+//             </article>
+//           ))}
+//         </div>
+//       </div>
+//     </section>
+//   );
+// }
+//new updated plans following code start 
+function Plans(){
+  
+const plans = [
+  {
+    id: "silver",
+    name: "Silver",
+    price: "₹599",
+    annual: "₹5,999",
+    artists: "1 artist",
+    audience: "For independent tattoo artists",
+    description: "Start organizing your appointments, clients and daily studio activities.",
+    features: [
+      "1 artist seat",
+      "1 studio workspace",
+      "Appointment management",
+      "Client records",
+      "Services and team profiles",
+      "Digital intake and consent records",
+      "Invoices and checkout records",
+      "Expense tracking and reports",
+      "Manual JSON backup",
+    ],
+  },
+  {
+    id: "gold",
+    name: "Gold",
+    price: "₹999",
+    annual: "₹9,999",
+    artists: "Up to 5 artists",
+    audience: "For growing tattoo studios",
+    description: "Bring your artists and studio operations together in one workspace.",
+    popular: true,
+    features: [
+      "Up to 5 artist seats",
+      "1 studio workspace",
+      "Appointment management",
+      "Client records",
+      "Services and team profiles",
+      "Digital intake and consent records",
+      "Invoices and checkout records",
+      "Expense tracking and reports",
+      "Manual JSON backup",
+    ],
+  },
+  {
+    id: "diamond",
+    name: "Diamond",
+    price: "₹1,499",
+    annual: "₹14,999",
+    artists: "Up to 10 artists",
+    audience: "For established tattoo studios",
+    description: "Manage a larger team with a centralized studio management workspace.",
+    features: [
+      "Up to 10 artist seats",
+      "1 studio workspace",
+      "Appointment management",
+      "Client records",
+      "Services and team profiles",
+      "Digital intake and consent records",
+      "Invoices and checkout records",
+      "Expense tracking and reports",
+      "Manual JSON backup",
+    ],
+  },
+];
+
 function Plans() {
-  const plans = ["Silver", "Gold", "Diamond"];
   return (
     <section id="plans" className="border-t bg-card py-24">
       <div className="mx-auto max-w-6xl px-5">
-        <Eyebrow>Plans</Eyebrow>
-        <h2 className="mt-3 text-3xl font-extrabold md:text-4xl">Choose the Plan that fits your Studio.</h2>
-        <p className="mt-4 max-w-xl text-muted-foreground">Current plan details, pricing, an billing options are shown when you choose a plan.</p>
-        <div className="mt-12 grid gap-5 md:grid-cols-3">
+        <div className="text-center">
+          <Eyebrow>Simple and transparent pricing</Eyebrow>
+
+          <h2 className="mt-3 text-3xl font-extrabold md:text-4xl">
+            The right plan for every tattoo studio.
+          </h2>
+
+          <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
+            From independent artists to growing studios, choose a plan
+            that fits your team. Every plan includes the essential
+            tools to manage your studio.
+          </p>
+        </div>
+
+        <div className="mt-12 grid items-stretch gap-6 md:grid-cols-3">
           {plans.map((p) => (
-            <article key={p} className="flex flex-col rounded-2xl border bg-background p-7 transition-shadow hover:shadow-soft">
-              <h3 className="text-2xl font-extrabold">{p}</h3>
-              <p className="mt-2 flex-1 text-sm text-muted-foreground">See what's included and current pricing for the {p} plan.</p>
-              <a href={site.plansUrl} className="btn-ghost mt-8">View plans</a>
+            <article
+              key={p.id}
+              className={`relative flex flex-col rounded-2xl border p-7 transition-all hover:-translate-y-1 hover:shadow-soft ${
+                p.popular
+                  ? "border-primary bg-background shadow-soft"
+                  : "bg-background"
+              }`}
+            >
+              {p.popular && (
+                <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-primary px-4 py-1 text-xs font-bold text-primary-foreground">
+                  MOST POPULAR
+                </span>
+              )}
+
+              <div>
+                <p className="text-sm font-semibold text-primary">
+                  {p.audience}
+                </p>
+
+                <h3 className="mt-2 text-2xl font-extrabold">
+                  {p.name}
+                </h3>
+
+                <p className="mt-2 min-h-12 text-sm text-muted-foreground">
+                  {p.description}
+                </p>
+              </div>
+
+              <div className="mt-7 border-b pb-6">
+                <div className="flex items-baseline gap-2">
+                  <span className="text-4xl font-extrabold tracking-tight">
+                    {p.price}
+                  </span>
+                  <span className="text-sm text-muted-foreground">
+                    / month
+                  </span>
+                </div>
+
+                <p className="mt-3 text-sm font-semibold">
+                  {p.annual} / year
+                </p>
+
+                <p className="mt-1 text-xs text-primary">
+                  Save approximately 2 months with annual billing
+                </p>
+
+                <div className="mt-5 rounded-lg bg-secondary px-4 py-3 text-sm font-semibold">
+                  {p.artists} · 1 studio
+                </div>
+              </div>
+
+              <div className="flex-1 pt-6">
+                <p className="mb-4 text-sm font-bold">
+                  What's included:
+                </p>
+
+                <ul className="space-y-3">
+                  {p.features.map((feature) => (
+                    <li
+                      key={feature}
+                      className="flex items-start gap-3 text-sm"
+                    >
+                      <Check
+                        className="mt-0.5 size-4 shrink-0 text-primary"
+                        aria-hidden
+                      />
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <a
+                href={site.plansUrl}
+                className={`mt-8 flex items-center justify-center gap-2 rounded-xl px-5 py-3 text-sm font-bold transition-colors ${
+                  p.popular
+                    ? "btn-primary"
+                    : "btn-ghost"
+                }`}
+              >
+                View Plan & Billing
+                <ArrowRight className="size-4" />
+              </a>
             </article>
           ))}
         </div>
+
+        <p className="mt-8 text-center text-xs text-muted-foreground">
+          Prices are in INR. Confirm applicable taxes and billing terms
+          before publishing. Plan limits apply according to your active
+          subscription.
+        </p>
       </div>
     </section>
   );
