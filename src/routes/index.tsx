@@ -7,9 +7,9 @@ import {
 import { site } from "@/config/site";
 import { DesktopMockup, MobileMockup } from "@/components/landing/Mockups";
 
-const TITLE = "InkFlow Studio | Tattoo Studio Management";
+const TITLE = "InkFlow | Tattoo Studio Management";
 const DESC =
-  "Manage appointments, clients, team, services, intake forms, invoices, expenses, and reports for your tattoo or piercing studio.";
+  "Manage appointments, clients, team, services, intake forms, consent forms, invoices, expenses, and reports for your tattoo or piercing studio.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -38,7 +38,7 @@ function Wordmark() {
   return (
     <a href="#top" className="flex items-center gap-2 font-display text-lg font-extrabold">
       <img src="/favicon.svg" alt="" className="size-7" width={28} height={28} />
-      InkFlow Studio
+      InkFlow by RiTech
     </a>
   );
 }
