@@ -297,8 +297,7 @@ function DataSection() {
 // }
 //new updated plans following code start 
 function Plans(){
-  
-const plans = [
+  const plans = [
   {
     id: "silver",
     name: "Silver",
@@ -361,7 +360,6 @@ const plans = [
     ],
   },
 ];
-
 function Plans() {
   return (
     <section id="plans" className="border-t bg-card py-24">
@@ -478,7 +476,7 @@ function Plans() {
     </section>
   );
 }
-
+}  
 function Faq() {
   const faqs: { q: string; a: React.ReactNode }[] = [
     { q: "What can I manage with InkFlow Studio?", a: "Appointments, client records, team members, services, intake forms and waivers, invoices and checkout records, expenses, reports, and your studio profile and preferences." },
