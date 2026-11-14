@@ -350,6 +350,9 @@ function Plans() {
         "Studio Reports & Analytics",
         "Studio Profile & Settings",
         "JSON Data Backup",
+        "Staff Attendance",
+        "Investment (Pigmi)",
+        "Scan Adhar"
       ],
     },
     {
@@ -376,6 +379,10 @@ function Plans() {
         "Studio Reports & Analytics",
         "Studio Profile & Settings",
         "JSON Data Backup",
+        "Staff Attendance",
+        "Investment (Pigmi)",
+        "Scan Adhar"
+        
       ],
     },
   ];
