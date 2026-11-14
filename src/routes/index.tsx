@@ -107,10 +107,10 @@ function Hero() {
         <div className="max-w-3xl">
           <Eyebrow>INK FLOW BY RITECH</Eyebrow>
           <h1 className="mt-4 text-4xl font-extrabold leading-[1.05] md:text-6xl">
-            Spend less time managing the studio. <span className="text-primary">More time making great work.</span>
+            Spend Less Time Managing The Studio. <span className="text-primary">More Time Making Great Work.</span>
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
-            InkFlow Platform brings appointments, client records, team details, services, intake forms, consent form, invoices, expenses, and reports into one organized workspace for your studio.
+            InkFlow Platform Brings Appointments, Client Records, Team Details, Services, Consent Form, Invoices, Expenses, And Reports Into One Organized Workspace For Your Studio.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a href="https://inkflwobeta2.vercel.app/" className="btn-primary">Create Your Studio Account <ArrowRight className="size-4" /></a>
