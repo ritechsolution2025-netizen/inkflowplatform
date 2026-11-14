@@ -381,8 +381,8 @@ function Plans() {
         "JSON Data Backup",
         "Staff Attendance",
         "Investment (Pigmi)",
-        "Scan Adhar"
-        "AI impliment"
+        "Scan Adhar",
+        "AI impliment",
         "Studio Website FREE"
       ],
     },
