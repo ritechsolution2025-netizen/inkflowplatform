@@ -63,8 +63,8 @@ function Header() {
           </ul>
         </nav>
         <div className="hidden items-center gap-4 lg:flex">
-          <a href="https://inkflwobeta2.vercel.app/" className="text-sm font-semibold hover:text-primary">Sign In</a>
-          <a href="https://inkflwobeta2.vercel.app/" className="btn-primary !py-2.5 text-sm">Create Your Studio Account</a>
+          <a href="https://inkflow-lu9s.vercel.app/" className="text-sm font-semibold hover:text-primary">Sign In</a>
+          <a href="https://inkflow-lu9s.vercel.app/" className="btn-primary !py-2.5 text-sm">Create Your Studio Account</a>
         </div>
         <button
           className="grid size-10 place-items-center rounded-full border lg:hidden"
@@ -86,8 +86,8 @@ function Header() {
             ))}
           </ul>
           <div className="mt-4 grid gap-2">
-            <a href="https://inkflwobeta2.vercel.app/" className="btn-primary">Create Your Studio Account</a>
-            <a href="https://inkflwobeta2.vercel.app/" className="btn-ghost">Sign In</a>
+            <a href="https://inkflow-lu9s.vercel.app/" className="btn-primary">Create Your Studio Account</a>
+            <a href="https://inkflow-lu9s.vercel.app/" className="btn-ghost">Sign In</a>
           </div>
         </nav>
       )}
@@ -113,7 +113,7 @@ function Hero() {
             InkFlow Platform Brings Appointments, Client Records, Team Details, Services, Consent Form, Invoices, Expenses, And Reports Into One Organized Workspace For Your Studio.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <a href="https://inkflwobeta2.vercel.app/" className="btn-primary">Create Your Studio Account <ArrowRight className="size-4" /></a>
+            <a href="https://inkflow-lu9s.vercel.app/" className="btn-primary">Create Your Studio Account <ArrowRight className="size-4" /></a>
             <a href="#features" className="btn-ghost">Explore the platform</a>
           </div>
           <p className="mt-4 text-sm text-muted-foreground">Built for tattoo and piercing studio workflows.</p>
@@ -287,7 +287,7 @@ function DataSection() {
 //              <article key={p} className="flex flex-col rounded-2xl border bg-background p-7 transition-shadow hover:shadow-soft">
 //                <h3 className="text-2xl font-extrabold">{p}</h3>
 //                <p className="mt-2 flex-1 text-sm text-muted-foreground">See what's included and current pricing for the {p} plan.</p>
-//                <a href="https://inkflwobeta2.vercel.app/" className="btn-ghost mt-8">View plans</a>
+//                <a href="https://inkflow-lu9s.vercel.app/" className="btn-ghost mt-8">View plans</a>
 //              </article>
 //            ))}
 //          </div>
@@ -525,7 +525,7 @@ function Plans() {
 
               {/* Choose Plan Button */}
               <a
-                href="https://inkflwobeta2.vercel.app/"
+                href="https://inkflow-lu9s.vercel.app/"
                 className={`mt-8 flex items-center justify-center gap-2 rounded-xl px-5 py-3 text-sm font-bold transition-all ${
                   p.popular
                     ? "btn-primary"
@@ -605,7 +605,7 @@ function Faq() {
     { q: "Can I manage more than one studio?", a: <>For questions about multiple studios on one account, please <a className="font-semibold text-primary underline underline-offset-4" href={site.supportHref}>contact support</a>.</> },
     { q: "Does the platform process card or online payments?", a: "The app records payment methods and transaction details for studio workflows. Payment processing is not included unless a payment integration is separately confirmed." },
     { q: "Can I export my studio data?", a: "The backup feature downloads a JSON file containing the selected studio's available records." },
-    { q: "How do I get started?", a: <><a className="font-semibold text-primary underline underline-offset-4" href="https://inkflwobeta2.vercel.app/">Create your studio account</a>, then set up your studio profile, team, and services.</> },
+    { q: "How do I get started?", a: <><a className="font-semibold text-primary underline underline-offset-4" href="https://inkflow-lu9s.vercel.app/">Create your studio account</a>, then set up your studio profile, team, and services.</> },
     { q: "How do I contact support?", a: <>Email us any time: <a className="font-semibold text-primary underline underline-offset-4" href={site.supportHref}>Contact Support</a>.</> },
   ];
   return (
@@ -634,8 +634,8 @@ function FinalCta() {
         <h2 className="mx-auto max-w-2xl text-3xl font-extrabold md:text-5xl">Ready to bring your studio workflow together?</h2>
         <p className="mx-auto mt-5 max-w-xl opacity-80">Set up your studio workspace and keep the day-to-day details easier to manage.</p>
         <div className="mt-8 flex flex-wrap justify-center gap-3">
-          <a href="https://inkflwobeta2.vercel.app/" className="btn-primary">Create Your Studio Account</a>
-          <a href="https://inkflwobeta2.vercel.app/" className="btn-invert">Sign In</a>
+          <a href="https://inkflow-lu9s.vercel.app/" className="btn-primary">Create Your Studio Account</a>
+          <a href="https://inkflow-lu9s.vercel.app/" className="btn-invert">Sign In</a>
         </div>
       </div>
     </section>
@@ -646,8 +646,8 @@ function Footer() {
   const links = [
     { href: "#features", label: "Features" },
     { href: "#plans", label: "Plans" },
-    { href: "https://inkflwobeta2.vercel.app/", label: "Sign In" },
-    { href: "https://inkflwobeta2.vercel.app/", label: "Create Account" },
+    { href: "https://inkflow-lu9s.vercel.app/", label: "Sign In" },
+    { href: "https://inkflow-lu9s.vercel.app/", label: "Create Account" },
     { href: site.supportHref, label: "Contact Support" },
     { href: site.privacyUrl, label: "Privacy Policy" },
     { href: site.termsUrl, label: "Terms" },
